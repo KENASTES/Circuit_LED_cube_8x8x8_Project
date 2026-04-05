@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=200&section=header&text=8x8x8%20LED%20Cube&fontSize=80&animation=fadeIn&fontAlignY=38" />
+</p>
+
 # 8x8x8 LED Cube Project
 > A 3D Light Show powered by Arduino and sheer willpower.
 
