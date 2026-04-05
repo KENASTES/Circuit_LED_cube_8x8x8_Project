@@ -1,31 +1,27 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/render?type=soft&color=auto&height=200&section=header&text=8x8x8%20LED%20Cube&fontSize=80&animation=fadeIn&fontAlignY=38" />
-</p>
-
-# 8x8x8 LED Cube Project
+<h1 align="center">8x8x8 LED Cube Project</h1>
 > A 3D Light Show powered by Arduino and sheer willpower.
 
 ![LED Cube Animation](./Docs/Project_media/Led_Cube_Gif.gif)
 
-## Overview
+<h2 align="center">Overview</h2>
 Repo นี้เป็นโปรเจกวิชา Circuit & Electronic ของผมตอนเรียนอยู่ KMITL โดยโปรเจคนี้เป็นหัวข้อที่ Assign มาจากอาจารย์อีกที โจทย์คือทำ Led Cube ขนาดใดก็ได้โดยจะนำโปรเจคนี้ไปให้เด็กพิการได้ใช้เป็นสื่อในการเรียนรู้ ตัวของโปรเจคเริ่มจากการเลือกใช้ โปรแกรมออกแบบและตัวหน้าที่ต่างๆ เราจะออกแบบ Model ของกล่องที่ใช้เป็นฐานเก็บวงจรและเป็น Base ให้กับตัว Led Cube ด้วย Solid Work 2023 แล้วนำตัวโมเดล Cad ไปปริ้นด้วย 3D Printer อีกที ตัววงจรจะออกแบบด้วย EasyEDA โดยใช้บอร์ด Control เป็น Arduino UNO R4 WIFI แล้วสื่อสารกับตัว Shift Register แบบ Serial in Parallel Out (SIPO) ด้วย Protocol SPI แล้วใช้ Transistor BD241C เป็น Low Side Switch ในการเปิดปิดและรับโหลดของหลอดไฟทั้ง Layer เนื่องจากกระแสในวงจรนั้นสูงมาก จากหลอดไฟ 20mA ทั้งเลเยอร์หรือก็คือ 64 หลอด 64 X 0.02 mA = 1.28A ซึ้งเสเปกโดยทั้วไปอาจจะใช้ขับหลอดไฟภายในเลเยอร์ไม่ได้ในส่วนของโปรแกรมจะสั่ง Input จาก 4X4 KeyPad แล้วใช้เป็น Logic Decision ในการเล่น Animation โดยตัวโค้ดในการออกแบบ Animation จะใช้จินตนาการว่า Led Cube คือการ Integrate พื้นที่ในแคลคูลัสแบบ Discrete 8X8X8 หรือแยก Position เป็น จุดออกมาจากการอินทีเกรตแล้วเขียนกราฟที่มี Animation ลงไปในสมการให้ตัว โหนดแต่ละโหนดเล่นตามสมการจึงเป็นสาเหตุว่าใน Code เป็นสมการแทบจะทั้งหมด
 
-## Tech Stack
+<h2 align="center">Tech Stack</h2>
 - $\color{cyan}{\textbf{Hardware :}}$ Arduino UNO R4 WIFI, 74HC595
 - $\color{orange}{\textbf{Firmware :}}$ C++ (Arduino Framework)
 - $\color{purple}{\textbf{Design :}}$ Solid Work 2023, EasyEDA
 
-## System Architecture
+<h2 align="center">System Architecture</h2>
 เราใช้การควบคุมแบบ $8 \times 8 \times 8$ โดยแบ่งเป็น:
-- $\color{green}{\textbf{Columns : }}$ 64 จุด (ควบคุมผ่าน 8x Shift Registers)
-- $\color{green}{\textbf{Layers : }}$ 8 ชั้น (ควบคุมผ่าน Darlington Array)
+- $\color{green}{\textbf{Columns : }}$ 64 จุด ควบคุมผ่าน 8x Shift Registers
+- $\color{green}{\textbf{Layers : }}$ 8 ชั้น ควบคุมผ่าน Transistor Darlington Array
 
-## Build Process
+<h2 align="center">Build Process</h2>
 | Building the Jig | Soldering Layers | Final Assembly |
 | :---: | :---: | :---: |
 | <img src="./Docs/Project_Image/74B12784-0B87-41C8-9E61-A98689FC6D83.jpg" height="250" alt="Building the Jig"> | <img src="./Docs/Project_Image/IMG_20250311_224342.jpg" height="250" alt="Soldering Layers"> | <img src="./Docs/Project_Image/1775366971204.jpg" height="250" alt="Final Assembly"> |
 
-## Contributors
+<h2 align="center">Contributors</h2>
 - $\color{red}{\textbf{Panya Triprom}}$ ([@KENASTES](https://github.com/KENASTES))
 - $\color{red}{\textbf{Rathiphat Buakaew}}$ ([@ratiphat2548](https://github.com/ratiphat2548))
 - $\color{red}{\textbf{Ploynumthong Chaiyotha}}$ ([@Ploynumthong](https://github.com/Ploynumthong))
