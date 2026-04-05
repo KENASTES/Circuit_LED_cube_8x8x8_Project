@@ -25,3 +25,6 @@ Arduino UNO R4 Wifi
 
 Perfboard
 1 Panel
+
+Female Pin Header
+≈100 pc
